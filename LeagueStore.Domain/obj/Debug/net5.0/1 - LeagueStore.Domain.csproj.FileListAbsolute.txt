@@ -1,0 +1,12 @@
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\bin\Debug\net5.0\1 - LeagueStore.Domain.deps.json
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\bin\Debug\net5.0\1 - LeagueStore.Domain.dll
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\bin\Debug\net5.0\ref\1 - LeagueStore.Domain.dll
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\bin\Debug\net5.0\1 - LeagueStore.Domain.pdb
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\obj\Debug\net5.0\1 - LeagueStore.Domain.csproj.AssemblyReference.cache
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\obj\Debug\net5.0\1 - LeagueStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\obj\Debug\net5.0\1 - LeagueStore.Domain.AssemblyInfoInputs.cache
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\obj\Debug\net5.0\1 - LeagueStore.Domain.AssemblyInfo.cs
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\obj\Debug\net5.0\1 - LeagueStore.Domain.csproj.CoreCompileInputs.cache
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\obj\Debug\net5.0\1 - LeagueStore.Domain.dll
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\obj\Debug\net5.0\ref\1 - LeagueStore.Domain.dll
+E:\BackEnd Dezembro 2021\Codigos\LeagueStore\LeagueStore.Domain\obj\Debug\net5.0\1 - LeagueStore.Domain.pdb
