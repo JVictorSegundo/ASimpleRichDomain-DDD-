@@ -9,7 +9,7 @@
       "LeagueStore.Domain.Tests/1.0.0": {
         "dependencies": {
           "FluentAssertions": "6.3.0",
-          "LeagueStore.Domain": "1.0.0",
+          "I_LeagueStore.Domain": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.4",
           "coverlet.collector": "3.0.2",
           "xunit": "2.4.1",
@@ -1129,9 +1129,9 @@
         }
       },
       "xunit.runner.visualstudio/2.4.3": {},
-      "LeagueStore.Domain/1.0.0": {
+      "I_LeagueStore.Domain/1.0.0": {
         "runtime": {
-          "LeagueStore.Domain.dll": {}
+          "I_LeagueStore.Domain.dll": {}
         }
       }
     }
@@ -1807,7 +1807,7 @@
       "path": "xunit.runner.visualstudio/2.4.3",
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
     },
-    "LeagueStore.Domain/1.0.0": {
+    "I_LeagueStore.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
