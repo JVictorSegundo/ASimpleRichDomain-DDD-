@@ -1,16 +1,16 @@
-﻿using LeagueStore.Domain.Entities;
+﻿using I_LeagueStore.Domain.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace LeagueStore.Domain.Interfaces
+namespace I_LeagueStore.Domain.Interfaces
 {
     public interface IItemRepository
     {
         Task<Item> GetByIdAsync(int id);
         Task<IEnumerable<Item>> GetAllAsync();
-        Task<IEnumerable<Item>> GetAllByCategoryId (int id);
+        Task<IEnumerable<Item>> GetAllByCategoryId(int id);
 
-        Task<Item> CreateAsync (Item item);
+        Task<Item> CreateAsync(Item item);
         Task<Item> UpdateAsync(Item item);
         Task<Item> DeleteAsync(Item item);
     }

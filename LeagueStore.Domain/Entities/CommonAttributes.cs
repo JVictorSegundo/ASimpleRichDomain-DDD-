@@ -1,8 +1,8 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LeagueStore.Domain.Entities
+namespace I_LeagueStore.Domain.Entities
 {
-    public  abstract class CommonAttributes
+    public abstract class CommonAttributes
     {
         public int Id { get; protected set; }
         public string Name { get; protected set; }

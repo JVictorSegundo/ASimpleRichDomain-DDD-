@@ -1,12 +1,13 @@
-﻿using LeagueStore.Domain.Validation;
-using LeagueStore.Domain.ValueObjects;
+﻿using I_LeagueStore.Domain.Validation;
+using I_LeagueStore.Domain.ValueObjects;
 
-namespace LeagueStore.Domain.Entities
+namespace I_LeagueStore.Domain.Entities
 {
     public class Item : CommonAttributes
     {
         public string Description { get; private set; }
         public string Attributes { get; private set; }
+        public string Price { get; private set; }
         public Attack Attack { get; private set; }
         public Defense Defense { get; private set; }
 
@@ -14,27 +15,27 @@ namespace LeagueStore.Domain.Entities
         public Category Category { get; set; }
         //---
 
-        public Item (string name, string description, Attack attack, Defense defense)
+        public Item(string name, string description, string price, Attack attack, Defense defense)
         {
-            Validate(name, description, attack, defense);
+            Validate(name, description, price, attack, defense);
             Attributes = $"Este item oferece: {attack.AttackDamage} de dano de ataque, " +
                 $"{defense.Armor} de armadura, {attack.MagicDamage} de dano mágico, {defense.MagicArmor} de defesa mágica e {defense.LifeAmount}" +
-                $" de quantidade vida adicional. Use-o sabiamente invocador";
+                $" de quantidade vida adicional, pelo preço de {price} de ouro. Use-o sabiamente invocador";
         }
         //---
 
-        public void Update (string name, string description, Attack attack, Defense defense, int categoryId)
+        public void Update(string name, string description, string price, Attack attack, Defense defense, int categoryId)
         {
-            Validate(name, description, attack, defense);
+            Validate(name, description, price, attack, defense);
             Attributes = $"Este item oferece: {attack.AttackDamage} de dano de ataque, " +
                 $"{defense.Armor} de armadura, {attack.MagicDamage} de dano mágico, {defense.MagicArmor} de defesa mágica e {defense.LifeAmount} " +
-                $"de quantidade vida adicional. Use-o sabiamente invocador";
+                $"de quantidade vida adicional, pelo preço de {price} de ouro. Use-o sabiamente invocador";
             CategoryId = categoryId;
         }
         //---
 
         //-----------------------------------------------------------[ Validations ]-----------------------------------------------------------\\
-        private void Validate (string name, string description, Attack attack, Defense defense)
+        private void Validate(string name, string description, string price, Attack attack, Defense defense)
         {
             //Name
             DomainValidation.DomainExceptions(string.IsNullOrEmpty(name), "Invalid name. Name is required!");
@@ -49,6 +50,14 @@ namespace LeagueStore.Domain.Entities
             DomainValidation.DomainExceptions(string.IsNullOrWhiteSpace(name), "Invalid description. The description can't be left blank!");
             DomainValidation.DomainExceptions(regx.IsMatch(description), "Invalid name. The item name can't contain special characters!");
             Description = description;
+
+            //Price
+            DomainValidation.ConvertibleToInt(price);
+            DomainValidation.DomainExceptions(string.IsNullOrEmpty(price), "Invalid price. Price is required!");
+            DomainValidation.DomainExceptions(string.IsNullOrWhiteSpace(price), "Invalid price. The price can't be left blank!");
+            DomainValidation.DomainExceptions(int.Parse(price) < 0, "Invalid price. The price must to be above 0!");
+            DomainValidation.DomainExceptions(int.Parse(price) > 1000, "Invalid price. The price must to be bellow 1000!");
+            Price = price;
 
             //Attacks [Attack Damage, Magic Damage]
             DomainValidation.ConvertibleToInt(attack.AttackDamage);
@@ -75,6 +84,6 @@ namespace LeagueStore.Domain.Entities
             DomainValidation.DomainExceptions(int.Parse(defense.MagicArmor) < 0, "Invalid magic armor amount. The amount of magic armor must to be above 0!");
             DomainValidation.DomainExceptions(int.Parse(defense.MagicArmor) > 50, "Invalid magic armor amount. The amount of magic armor must to be bellow 50!");
             Defense = defense;
-        } 
+        }
     }
 }
